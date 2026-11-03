@@ -1,0 +1,543 @@
+{
+  "meta": {
+    "source_report": [
+      "docs/audits/sprint12_results.json",
+      "data/hypotheses/*.json",
+      "docs/audits/sprint12_inference_simulation.json",
+      "configs/features_us100.yaml",
+      "SPRINT_12_REPORT.md"
+    ],
+    "generated_at": "2026-10-26T02:11:26+00:00",
+    "classification": "Pre-registered replications (B-series, all failed) and earlier exploratory hypotheses (A-series)",
+    "period": "discovery 2013-01-01 to 2022-12-31; replication 2023-01-01 to 2025-12-31",
+    "methodology_ref": "/methodology#statistics",
+    "backend_commit": "0723c91"
+  },
+  "data": {
+    "hypotheses": {
+      "A001": {
+        "statement": "20-day momentum predicts 20-day forward relative return",
+        "metric": "RankIC",
+        "value": 0.1475,
+        "verdict": "Inconclusive",
+        "tier": "exploratory",
+        "revision": {
+          "from": "Promising",
+          "to": "Inconclusive",
+          "reason": "Sprint 11: the original rule (mean Rank IC >= 0.02 -> Promising) applied no significance test and no minimum universe size. With 3 symbols, a day's Rank IC can only be -1, -0.5, 0.5 or 1, and overlapping forward-return windows leave few independent observations. Overlap-adjusted t-stats are about 1.2 (Sprint 10 audit, docs/audits/sprint10_ic_audit.py), which is not distinguishable from zero."
+        },
+        "replication_of": null,
+        "notes": []
+      },
+      "A002": {
+        "statement": "RSI(14) predicts 5-day forward relative return",
+        "metric": "RankIC",
+        "value": 0.0281,
+        "verdict": "Inconclusive",
+        "tier": "exploratory",
+        "revision": {
+          "from": "Promising",
+          "to": "Inconclusive",
+          "reason": "Sprint 11: the original rule (mean Rank IC >= 0.02 -> Promising) applied no significance test and no minimum universe size. With 3 symbols, a day's Rank IC can only be -1, -0.5, 0.5 or 1, and overlapping forward-return windows leave few independent observations. Overlap-adjusted t-stats are about 0.5 (Sprint 10 audit, docs/audits/sprint10_ic_audit.py), which is not distinguishable from zero."
+        },
+        "replication_of": null,
+        "notes": []
+      },
+      "A003": {
+        "statement": "XGBoost 20d rank model + quantile long-short portfolio has positive OOS Sharpe after costs",
+        "metric": "Sharpe",
+        "value": -0.8236,
+        "verdict": "Reject",
+        "tier": "exploratory",
+        "revision": null,
+        "replication_of": null,
+        "notes": [
+          "Sprint 11: tested under the pre-Sprint-11 simulator (short sales with no borrow fee, no dividends). Verdict unchanged: borrow fees would only lower an already negative Sharpe."
+        ]
+      },
+      "A004": {
+        "statement": "Same model, volatility-scaled quantile long-short portfolio improves OOS Sharpe over A003",
+        "metric": "Sharpe",
+        "value": -0.8035,
+        "verdict": "Reject",
+        "tier": "exploratory",
+        "revision": null,
+        "replication_of": null,
+        "notes": [
+          "Sprint 11: tested under the pre-Sprint-11 simulator (short sales with no borrow fee, no dividends). Verdict unchanged: borrow fees would only lower an already negative Sharpe."
+        ]
+      },
+      "A005": {
+        "statement": "Same model, dollar-neutral rank-weighted portfolio",
+        "metric": "Sharpe",
+        "value": -0.7459,
+        "verdict": "Reject",
+        "tier": "exploratory",
+        "revision": null,
+        "replication_of": null,
+        "notes": [
+          "Sprint 11: tested under the pre-Sprint-11 simulator (short sales with no borrow fee, no dividends). Verdict unchanged: borrow fees would only lower an already negative Sharpe."
+        ]
+      },
+      "B001": {
+        "statement": "20-day momentum predicts 20-day forward relative return (expanded universe)",
+        "metric": "RankIC (discovery 2013-2022)",
+        "value": -0.0123,
+        "verdict": "Inconclusive",
+        "tier": "exploratory",
+        "revision": null,
+        "replication_of": "A001",
+        "notes": []
+      },
+      "B002": {
+        "statement": "RSI(14) predicts 5-day forward relative return (expanded universe)",
+        "metric": "RankIC (discovery 2013-2022)",
+        "value": -0.0058,
+        "verdict": "Reject",
+        "tier": "exploratory",
+        "revision": null,
+        "replication_of": "A002",
+        "notes": []
+      },
+      "B003": {
+        "statement": "XGBoost 20d rank model + quantile long-short portfolio has positive OOS Sharpe after costs (expanded universe)",
+        "metric": "Sharpe (discovery 2013-2022)",
+        "value": -1.6905,
+        "verdict": "Reject",
+        "tier": "exploratory",
+        "revision": null,
+        "replication_of": "A003",
+        "notes": []
+      },
+      "B004": {
+        "statement": "Same model, volatility-scaled quantile long-short portfolio (expanded universe)",
+        "metric": "Sharpe (discovery 2013-2022)",
+        "value": -2.6775,
+        "verdict": "Reject",
+        "tier": "exploratory",
+        "revision": null,
+        "replication_of": "A004",
+        "notes": []
+      },
+      "B005": {
+        "statement": "Same model, dollar-neutral rank-weighted portfolio (expanded universe)",
+        "metric": "Sharpe (discovery 2013-2022)",
+        "value": -1.4751,
+        "verdict": "Reject",
+        "tier": "exploratory",
+        "revision": null,
+        "replication_of": "A005",
+        "notes": []
+      }
+    },
+    "primary": {
+      "B001": {
+        "metric": "Rank IC",
+        "discovery": {
+          "estimate": -0.0123,
+          "ci": [
+            -0.0485,
+            0.0243
+          ],
+          "p": 0.4944,
+          "holm_p": 0.9624
+        },
+        "replication": {
+          "estimate": -0.0016,
+          "p": 0.9473
+        },
+        "verdict": "Inconclusive",
+        "reasons": [
+          "not statistically significant: estimate -0.0123, adjusted p = 0.9624, CI [-0.0485, +0.0243]",
+          "replication window: estimate -0.0016, p = 0.9473"
+        ],
+        "account": "CASH_ONLY"
+      },
+      "B002": {
+        "metric": "Rank IC",
+        "discovery": {
+          "estimate": -0.0058,
+          "ci": [
+            -0.0225,
+            0.011
+          ],
+          "p": 0.4812,
+          "holm_p": 0.9624
+        },
+        "replication": {
+          "estimate": -0.0032,
+          "p": 0.8249
+        },
+        "verdict": "Reject",
+        "reasons": [
+          "not significant and the CI excludes an effect of 0.02: estimate -0.0058, adjusted p = 0.9624, CI [-0.0225, +0.0110]",
+          "replication window: estimate -0.0032, p = 0.8249"
+        ],
+        "account": "CASH_ONLY"
+      },
+      "B003": {
+        "metric": "Sharpe after costs",
+        "discovery": {
+          "estimate": -1.6905,
+          "ci": [
+            -2.2894,
+            -1.066
+          ],
+          "p": 0.0,
+          "holm_p": 0.0002
+        },
+        "replication": {
+          "estimate": -1.4176,
+          "p": 0.0056
+        },
+        "verdict": "Reject",
+        "reasons": [
+          "non-positive Sharpe after costs: Sharpe -1.69 (bootstrap CI [-2.29, -1.07]), adjusted p = 0.0002",
+          "replication window: estimate -1.4176, p = 0.0056"
+        ],
+        "account": "MARGIN_RESEARCH (margin-enabled research"
+      },
+      "B004": {
+        "metric": "Sharpe after costs",
+        "discovery": {
+          "estimate": -2.6775,
+          "ci": [
+            -3.3324,
+            -2.0409
+          ],
+          "p": 0.0,
+          "holm_p": 0.0
+        },
+        "replication": {
+          "estimate": -2.0514,
+          "p": 0.0003
+        },
+        "verdict": "Reject",
+        "reasons": [
+          "non-positive Sharpe after costs: Sharpe -2.68 (bootstrap CI [-3.33, -2.04]), adjusted p = 0.0000",
+          "replication window: estimate -2.0514, p = 0.0003"
+        ],
+        "account": "MARGIN_RESEARCH (margin-enabled research"
+      },
+      "B005": {
+        "metric": "Sharpe after costs",
+        "discovery": {
+          "estimate": -1.4751,
+          "ci": [
+            -2.0903,
+            -0.8603
+          ],
+          "p": 0.0003,
+          "holm_p": 0.0009
+        },
+        "replication": {
+          "estimate": -1.3541,
+          "p": 0.0133
+        },
+        "verdict": "Reject",
+        "reasons": [
+          "non-positive Sharpe after costs: Sharpe -1.48 (bootstrap CI [-2.09, -0.86]), adjusted p = 0.0009",
+          "replication window: estimate -1.3541, p = 0.0133"
+        ],
+        "account": "MARGIN_RESEARCH (margin-enabled research"
+      }
+    },
+    "exploratory_leads": [
+      {
+        "feature": "mom_252_21",
+        "horizon": 21,
+        "estimate": 0.026,
+        "p": 0.2158
+      },
+      {
+        "feature": "rs_126",
+        "horizon": 21,
+        "estimate": 0.0222,
+        "p": 0.2547
+      },
+      {
+        "feature": "ret_21",
+        "horizon": 21,
+        "estimate": 0.0125,
+        "p": 0.493
+      },
+      {
+        "feature": "vol_63",
+        "horizon": 21,
+        "estimate": -0.0285,
+        "p": 0.2278
+      },
+      {
+        "feature": "amihud_63",
+        "horizon": 21,
+        "estimate": 0.0314,
+        "p": 0.0498
+      },
+      {
+        "feature": "log_dollar_volume_63",
+        "horizon": 21,
+        "estimate": 0.0244,
+        "p": 0.127
+      },
+      {
+        "feature": "momentum_60",
+        "horizon": 21,
+        "estimate": -0.0003,
+        "p": 0.993
+      },
+      {
+        "feature": "drawdown",
+        "horizon": 21,
+        "estimate": 0.0145,
+        "p": 0.4939
+      }
+    ],
+    "inference_simulation": {
+      "alpha": 0.05,
+      "reps": 400,
+      "scenarios": [
+        {
+          "process": "gaussian_ma",
+          "n": 2500,
+          "window": "discovery-length",
+          "h": 5,
+          "naive_t": 0.3825,
+          "newey_west_h-1": 0.1275,
+          "hansen_hodrick": 0.06,
+          "batch_means": 0.0675,
+          "combined": 0.0475
+        },
+        {
+          "process": "gaussian_ma",
+          "n": 2500,
+          "window": "discovery-length",
+          "h": 20,
+          "naive_t": 0.68,
+          "newey_west_h-1": 0.12,
+          "hansen_hodrick": 0.0575,
+          "batch_means": 0.0625,
+          "combined": 0.0475
+        },
+        {
+          "process": "gaussian_ma",
+          "n": 732,
+          "window": "replication-length",
+          "h": 5,
+          "naive_t": 0.39,
+          "newey_west_h-1": 0.1025,
+          "hansen_hodrick": 0.0625,
+          "batch_means": 0.0575,
+          "combined": 0.045
+        },
+        {
+          "process": "gaussian_ma",
+          "n": 732,
+          "window": "replication-length",
+          "h": 20,
+          "naive_t": 0.6675,
+          "newey_west_h-1": 0.135,
+          "hansen_hodrick": 0.0575,
+          "batch_means": 0.085,
+          "combined": 0.055
+        },
+        {
+          "process": "heavy_tails",
+          "n": 2500,
+          "window": "discovery-length",
+          "h": 5,
+          "naive_t": 0.3925,
+          "newey_west_h-1": 0.1,
+          "hansen_hodrick": 0.055,
+          "batch_means": 0.06,
+          "combined": 0.0425
+        },
+        {
+          "process": "heavy_tails",
+          "n": 2500,
+          "window": "discovery-length",
+          "h": 20,
+          "naive_t": 0.6775,
+          "newey_west_h-1": 0.14,
+          "hansen_hodrick": 0.055,
+          "batch_means": 0.07,
+          "combined": 0.0425
+        },
+        {
+          "process": "heavy_tails",
+          "n": 732,
+          "window": "replication-length",
+          "h": 5,
+          "naive_t": 0.41,
+          "newey_west_h-1": 0.0925,
+          "hansen_hodrick": 0.0625,
+          "batch_means": 0.0675,
+          "combined": 0.05
+        },
+        {
+          "process": "heavy_tails",
+          "n": 732,
+          "window": "replication-length",
+          "h": 20,
+          "naive_t": 0.645,
+          "newey_west_h-1": 0.0975,
+          "hansen_hodrick": 0.0475,
+          "batch_means": 0.0475,
+          "combined": 0.0425
+        },
+        {
+          "process": "volatility_regimes",
+          "n": 2500,
+          "window": "discovery-length",
+          "h": 5,
+          "naive_t": 0.37,
+          "newey_west_h-1": 0.085,
+          "hansen_hodrick": 0.0425,
+          "batch_means": 0.0225,
+          "combined": 0.0175
+        },
+        {
+          "process": "volatility_regimes",
+          "n": 2500,
+          "window": "discovery-length",
+          "h": 20,
+          "naive_t": 0.6425,
+          "newey_west_h-1": 0.0925,
+          "hansen_hodrick": 0.0525,
+          "batch_means": 0.0425,
+          "combined": 0.025
+        },
+        {
+          "process": "volatility_regimes",
+          "n": 732,
+          "window": "replication-length",
+          "h": 5,
+          "naive_t": 0.3875,
+          "newey_west_h-1": 0.1075,
+          "hansen_hodrick": 0.07,
+          "batch_means": 0.05,
+          "combined": 0.04
+        },
+        {
+          "process": "volatility_regimes",
+          "n": 732,
+          "window": "replication-length",
+          "h": 20,
+          "naive_t": 0.665,
+          "newey_west_h-1": 0.13,
+          "hansen_hodrick": 0.0675,
+          "batch_means": 0.07,
+          "combined": 0.045
+        },
+        {
+          "process": "persistent_ar1",
+          "n": 2500,
+          "window": "discovery-length",
+          "h": 5,
+          "naive_t": 0.66,
+          "newey_west_h-1": 0.3675,
+          "hansen_hodrick": 0.12,
+          "batch_means": 0.0475,
+          "combined": 0.0475
+        },
+        {
+          "process": "persistent_ar1",
+          "n": 2500,
+          "window": "discovery-length",
+          "h": 20,
+          "naive_t": 0.735,
+          "newey_west_h-1": 0.1675,
+          "hansen_hodrick": 0.075,
+          "batch_means": 0.0575,
+          "combined": 0.0525
+        },
+        {
+          "process": "persistent_ar1",
+          "n": 732,
+          "window": "replication-length",
+          "h": 5,
+          "naive_t": 0.6525,
+          "newey_west_h-1": 0.34,
+          "hansen_hodrick": 0.165,
+          "batch_means": 0.0675,
+          "combined": 0.065
+        },
+        {
+          "process": "persistent_ar1",
+          "n": 732,
+          "window": "replication-length",
+          "h": 20,
+          "naive_t": 0.7775,
+          "newey_west_h-1": 0.2,
+          "hansen_hodrick": 0.0925,
+          "batch_means": 0.09,
+          "combined": 0.0875
+        }
+      ]
+    },
+    "features": {
+      "sma": {
+        "windows": [
+          20,
+          50,
+          200
+        ]
+      },
+      "ema": {
+        "windows": [
+          20
+        ]
+      },
+      "rsi": {
+        "period": 14
+      },
+      "atr": {
+        "period": 14
+      },
+      "bollinger": {
+        "period": 20
+      },
+      "momentum": {
+        "windows": [
+          5,
+          20,
+          60
+        ]
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "drawdown": null,
+      "momentum_skip": {
+        "lookback": 252,
+        "skip": 21
+      },
+      "total_return": {
+        "windows": [
+          21,
+          63,
+          126
+        ]
+      },
+      "realized_volatility": {
+        "windows": [
+          20,
+          63
+        ]
+      },
+      "liquidity": {
+        "windows": [
+          20,
+          63
+        ]
+      }
+    },
+    "universe": {
+      "name": "us_liquid_100",
+      "source": "hand-compiled approximation of current S&P 100 members (not an official list)",
+      "survivorship_bias_free": false,
+      "n_candidates": 108
+    }
+  }
+}

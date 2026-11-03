@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* Alpha Fund design tokens: deep navy and charcoal surfaces, teal and muted-blue accents. */
+@theme {
+  --color-ink-950: #070c17;
+  --color-ink-900: #0a1120;
+  --color-ink-850: #0e1628;
+  --color-ink-800: #121b30;
+  --color-ink-700: #1b2640;
+  --color-ink-600: #27344f;
+  --color-line: #223049;
+  --color-fg: #e7ecf4;
+  --color-fg-muted: #a3afc2;
+  --color-fg-subtle: #7d8aa1;
+  --color-teal: #2ec4b6;
+  --color-teal-soft: #1f8f86;
+  --color-blue: #7aa2d6;
+  --color-blue-soft: #4f74a8;
+  --color-amber: #e3b866;
+  --color-rose: #e08a8a;
+  --color-emerald: #6fcf97;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif-display), ui-serif, Georgia, serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background: var(--color-ink-900);
+  color: var(--color-fg);
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgb(46 196 182 / 0.07), transparent 60%),
+    radial-gradient(900px 500px at 100% 0%, rgb(122 162 214 / 0.06), transparent 60%),
+    var(--color-ink-900);
+  font-family: var(--font-sans);
+  font-feature-settings: "cv11", "ss01";
+}
+
+::selection {
+  background: rgb(46 196 182 / 0.35);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

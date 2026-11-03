@@ -1,0 +1,335 @@
+{
+  "meta": {
+    "source_report": [
+      "ROADMAP.md",
+      "SPRINT_10_REPORT.md \u2026 SPRINT_16_REPORT.md"
+    ],
+    "generated_at": "2026-10-26T02:11:26+00:00",
+    "classification": "Development history",
+    "period": "2026-07-28 to 2026-10",
+    "methodology_ref": "/roadmap",
+    "backend_commit": "0723c91",
+    "note": "Sprints 1\u20139 predate version control; their numbering and dates are partly inferred from file dates."
+  },
+  "data": {
+    "sprints": [
+      {
+        "sprint": "1\u20132",
+        "date": "2026-07-28 \u2013 07-29",
+        "status": "complete",
+        "inferred": true,
+        "title": "Foundations",
+        "objective": "Project skeleton and a reproducible market-data pipeline.",
+        "delivered": [
+          "Yahoo Finance ingestion",
+          "Parquet storage",
+          "Feature registry with 8 technical feature generators",
+          "Logging"
+        ],
+        "engineering": [],
+        "findings": [],
+        "limitations": [
+          "Sprint numbering inferred from file dates"
+        ],
+        "source": "ROADMAP.md"
+      },
+      {
+        "sprint": "3",
+        "date": "2026-07-30",
+        "status": "complete",
+        "inferred": true,
+        "title": "Domain model and strategies",
+        "objective": "A strategy interface that only produces target weights.",
+        "delivered": [
+          "Core domain objects (orders, trades, positions, portfolio)",
+          "Strategy interface",
+          "5 rule-based strategies",
+          "Signal generator",
+          "Execution costs"
+        ],
+        "engineering": [],
+        "findings": [],
+        "limitations": [
+          "Sprint numbering inferred from file dates"
+        ],
+        "source": "ROADMAP.md"
+      },
+      {
+        "sprint": "4\u20135",
+        "date": "2026-07-31",
+        "status": "complete",
+        "inferred": false,
+        "title": "Backtesting and validation",
+        "objective": "Event-driven portfolio simulation with risk rules and out-of-sample validation.",
+        "delivered": [
+          "Portfolio simulator and performance metrics",
+          "Risk manager with 7 rules",
+          "Baselines",
+          "Parameter optimization",
+          "Walk-forward validation",
+          "Experiment records"
+        ],
+        "engineering": [],
+        "findings": [],
+        "limitations": [],
+        "source": "ROADMAP.md"
+      },
+      {
+        "sprint": "6",
+        "date": "2026-08-03",
+        "status": "complete",
+        "inferred": true,
+        "title": "ML utilities",
+        "objective": "Shared machine-learning metrics and time-series utilities.",
+        "delivered": [
+          "ML metrics",
+          "Time-series utilities",
+          "Exception hierarchy"
+        ],
+        "engineering": [],
+        "findings": [],
+        "limitations": [
+          "Sprint numbering inferred from file dates"
+        ],
+        "source": "ROADMAP.md"
+      },
+      {
+        "sprint": "7\u20138",
+        "date": "2026-08-11",
+        "status": "complete",
+        "inferred": false,
+        "title": "Machine-learning framework",
+        "objective": "Leak-free supervised learning on financial time series.",
+        "delivered": [
+          "Targets and dataset builder",
+          "Purged train/test splitter",
+          "6 model types including XGBoost and LightGBM",
+          "Position sizers and model store",
+          "ML walk-forward with hyperparameter search",
+          "Significance tests and cost sensitivity"
+        ],
+        "engineering": [],
+        "findings": [],
+        "limitations": [],
+        "source": "ROADMAP.md"
+      },
+      {
+        "sprint": "9",
+        "date": "2026-08-13",
+        "status": "complete",
+        "inferred": false,
+        "title": "Cross-sectional research",
+        "objective": "Rank-based signal research and a hypothesis log.",
+        "delivered": [
+          "Cross-sectional ranking and rank targets",
+          "Signal analytics (IC, rank IC, decay)",
+          "Portfolio constructors",
+          "Append-only hypothesis log",
+          "Hypotheses A001\u2013A005"
+        ],
+        "engineering": [],
+        "findings": [
+          "A001/A002 were first recorded as Promising (revised in Sprint 11)",
+          "A003\u2013A005 (ML long/short) rejected"
+        ],
+        "limitations": [
+          "3-symbol universe"
+        ],
+        "source": "ROADMAP.md, data/hypotheses/"
+      },
+      {
+        "sprint": "10",
+        "date": "2026-10-13",
+        "status": "complete",
+        "inferred": false,
+        "title": "Repository stabilization",
+        "objective": "Version control, documentation and an audit of financial correctness, without changing trading logic.",
+        "delivered": [
+          "Git repository and .gitignore",
+          "README, PROJECT, ARCHITECTURE, ROADMAP, TASKS",
+          "Dependency audit",
+          "Financial-correctness audit"
+        ],
+        "engineering": [
+          "439 tests passing"
+        ],
+        "findings": [
+          "Audit found free leverage, free short selling and missing dividends in the original simulator"
+        ],
+        "limitations": [],
+        "source": "SPRINT_10_REPORT.md"
+      },
+      {
+        "sprint": "11",
+        "date": "2026-10-13",
+        "status": "complete",
+        "inferred": false,
+        "title": "Financial correctness",
+        "objective": "Realistic portfolio accounting enforced at the execution boundary.",
+        "delivered": [
+          "CASH_ONLY (default) and MARGIN_RESEARCH account modes",
+          "Accounting invariants checked on every bar",
+          "Financing, borrow fees, dividends and splits",
+          "One shared financial configuration for every workflow",
+          "Legacy records labelled; legacy vs corrected re-run"
+        ],
+        "engineering": [
+          "525 tests passing at completion"
+        ],
+        "findings": [
+          "On the 3-stock universe, the legacy SMA crossover backtest (+303%, 2020\u20132026) relied on up to 3.8x free leverage; the corrected cash-only backtest returned +174% (historical, exploratory)",
+          "A001 and A002 revised from Promising to Inconclusive"
+        ],
+        "limitations": [
+          "3-symbol universe"
+        ],
+        "source": "SPRINT_11_REPORT.md, docs/audits/sprint11_results.json"
+      },
+      {
+        "sprint": "12",
+        "date": "2026-10-14",
+        "status": "complete",
+        "inferred": false,
+        "title": "Data expansion and statistical validity",
+        "objective": "A 106-stock universe and inference that survives overlapping returns and multiple testing.",
+        "delivered": [
+          "Batched, cached ingestion with data-quality checks",
+          "Point-in-time eligibility",
+          "Cross-sectional features",
+          "Hansen-Hodrick and batch-means inference; Holm and Benjamini-Hochberg",
+          "Evidence-based verdicts",
+          "Pre-registered replications B001\u2013B005"
+        ],
+        "engineering": [
+          "636 tests passing"
+        ],
+        "findings": [
+          "All five pre-registered replications failed",
+          "Textbook Newey-West was oversized in simulation (8.5\u201337% false positives at a nominal 5%)"
+        ],
+        "limitations": [
+          "Hand-compiled current-constituent universe: survivorship-biased"
+        ],
+        "source": "SPRINT_12_REPORT.md, docs/audits/sprint12_results.json"
+      },
+      {
+        "sprint": "13",
+        "date": "2026-10-14",
+        "status": "complete",
+        "inferred": false,
+        "title": "Low-turnover execution",
+        "objective": "Rebalancing schedules, trading controls and an explicit cost model.",
+        "delivered": [
+          "Execution policy: schedules, timing, no-trade bands, minimum trades, turnover budgets",
+          "One transaction-cost convention",
+          "Cost attribution",
+          "Inverse-volatility, rank and cash-buffer portfolios"
+        ],
+        "engineering": [
+          "709 tests passing",
+          "Fixed a latent long/short flip recursion"
+        ],
+        "findings": [
+          "Monthly instead of daily rebalancing cut turnover by 72\u201381% (exploratory)"
+        ],
+        "limitations": [
+          "Every date in 2010\u20132025 had been examined before"
+        ],
+        "source": "SPRINT_13_REPORT.md, docs/audits/sprint13_results_corrected.json"
+      },
+      {
+        "sprint": "14",
+        "date": "2026-10-18",
+        "status": "complete",
+        "inferred": false,
+        "title": "Adaptive risk and prospective validation",
+        "objective": "Optional risk overlays and an append-only record of forward-looking decisions.",
+        "delivered": [
+          "Adaptive drawdown state machine",
+          "Volatility targeting",
+          "Most-restrictive-wins overlay composition",
+          "Hash-chained prospective ledger",
+          "Exploratory five-configuration comparison"
+        ],
+        "engineering": [
+          "838 tests passing",
+          "NYSE calendar; fixes to early-close timing, bar finality and concurrent appends"
+        ],
+        "findings": [
+          "Every overlay roughly halved maximum drawdown and cut CAGR by 5\u20139 points; none improved the Sharpe ratio meaningfully (exploratory)"
+        ],
+        "limitations": [
+          "Thresholds illustrative, not fitted; no significance tests"
+        ],
+        "source": "SPRINT_14_REPORT.md, docs/audits/sprint14_results.json"
+      },
+      {
+        "sprint": "15",
+        "date": "2026-10-19",
+        "status": "complete",
+        "inferred": false,
+        "title": "Prospective research operations",
+        "objective": "A safe, repeatable monthly workflow for genuine forward-looking records.",
+        "delivered": [
+          "Atomic four-book recording",
+          "Recording windows from the exchange calendar",
+          "Read-only preflight checks",
+          "Reproducible monthly reports",
+          "Pre-registered research question P001",
+          "Operator quickstart"
+        ],
+        "engineering": [
+          "883 tests passing",
+          "Recording requires committed code"
+        ],
+        "findings": [
+          "A 12-month BACKFILL practice run (not evidence) completed and verified"
+        ],
+        "limitations": [
+          "Local clock; time evidence only after each push"
+        ],
+        "source": "SPRINT_15_REPORT.md"
+      },
+      {
+        "sprint": "16",
+        "date": "2026-10-21",
+        "status": "complete",
+        "inferred": false,
+        "title": "Data reliability and monitoring",
+        "objective": "Detect, quarantine and log market-data problems; protect prospective records.",
+        "delivered": [
+          "Staged, validated, incremental data refresh with a revision log",
+          "Immutable data snapshots behind prospective decisions",
+          "Read-only health monitoring and ledger diagnosis",
+          "Reproducibility audit"
+        ],
+        "engineering": [
+          "944 tests passing",
+          "Fixed: a stock whose data stops could be silently dropped from the live data, history included"
+        ],
+        "findings": [
+          "Yahoo revises open/high/low/volume for days after the close; closing prices were stable"
+        ],
+        "limitations": [
+          "Snapshots are local; old-bar corrections need a full refresh"
+        ],
+        "source": "SPRINT_16_REPORT.md"
+      },
+      {
+        "sprint": "17",
+        "date": "2026-10",
+        "status": "in development",
+        "inferred": false,
+        "title": "Research website",
+        "objective": "Publish the research honestly, including negative results.",
+        "delivered": [
+          "This website (static; built from exported datasets that require the owner's approval before publication)"
+        ],
+        "engineering": [],
+        "findings": [],
+        "limitations": [],
+        "source": "alpha-fund-web/SPRINT_17_REPORT.md"
+      }
+    ]
+  }
+}

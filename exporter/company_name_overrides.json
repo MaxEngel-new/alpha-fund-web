@@ -1,0 +1,53 @@
+{
+  "HON": {
+    "company": "Honeywell International Inc.",
+    "status": "issuer_verified",
+    "issuer_cik": "0000773840",
+    "reviewed_by": "Alpha Fund research assistant, for owner approval",
+    "reviewed_on": "2026-11-02",
+    "evidence": "Exact registrant name on the cover of the 10-Q for the period ended 2026-09-30 (filed 2026-10-22): Honeywell International Inc. (Delaware; HON on Nasdaq). Matches the Nasdaq Trader listing name and the SEC registrant record.",
+    "ambiguity": "Since the Honeywell Aerospace spin-off (completed 2026-06-29) the company operates under the business name Honeywell Technologies; its legal name did not change. Honeywell Aerospace Inc. (HONA, CIK 0002089271) is a separate issuer. HON's price history before 2026-06-29 includes the aerospace business.",
+    "sources": [
+      {"name": "SEC EDGAR, Honeywell International Inc. 10-Q for the period ended 2026-09-30", "url": "https://www.sec.gov/Archives/edgar/data/773840/000077384026000143/hon-20260930.htm"},
+      {"name": "Honeywell press release, 2026-06-15: Board approves spin-off of Honeywell Aerospace", "url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-approves-spin-off-of-honeywell-aerospace"}
+    ]
+  },
+  "IBM": {
+    "company": "International Business Machines Corporation",
+    "status": "issuer_verified",
+    "issuer_cik": "0000051143",
+    "reviewed_by": "Alpha Fund research assistant, for owner approval",
+    "reviewed_on": "2026-11-02",
+    "evidence": "Exact registrant name on the cover of the 10-Q for the period ended 2026-09-30 (filed 2026-10-22): INTERNATIONAL BUSINESS MACHINES CORPORATION (New York; IBM on the NYSE). Shown in the listing's capitalization, as in the Nasdaq Trader directory.",
+    "ambiguity": "None: IBM is the common abbreviation of the legal name; the flag came only from the reference list using the abbreviation.",
+    "sources": [
+      {"name": "SEC EDGAR, International Business Machines Corporation 10-Q for the period ended 2026-09-30", "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114326000095/ibm-20260930.htm"}
+    ]
+  },
+  "JPM": {
+    "company": "JPMorgan Chase & Co.",
+    "status": "issuer_verified",
+    "issuer_cik": "0000019617",
+    "reviewed_by": "Alpha Fund research assistant, for owner approval",
+    "reviewed_on": "2026-11-02",
+    "evidence": "Registrant name in the cover-page data of the 10-Q for the period ended 2026-06-30: JPMorgan Chase & Co (Delaware; JPM on the NYSE); the company's investor-relations site states its name as JPMorgan Chase & Co.",
+    "ambiguity": "The Nasdaq Trader directory lists 'JP Morgan Chase & Co.', close to the registrant's pre-2011 SEC name (J P Morgan Chase & Co); the current legal name is JPMorgan Chase & Co. The brand is written JPMorganChase.",
+    "sources": [
+      {"name": "SEC EDGAR, JPMorgan Chase & Co. 10-Q cover page data, period ended 2026-06-30", "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026054343/R1.htm"},
+      {"name": "SEC EDGAR company record, CIK 0000019617 (former names)", "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617"},
+      {"name": "JPMorgan Chase & Co. investor relations", "url": "https://www.jpmorganchase.com/ir"}
+    ]
+  },
+  "SLB": {
+    "company": "SLB N.V. (SLB Limited)",
+    "status": "issuer_verified",
+    "issuer_cik": "0000087347",
+    "reviewed_by": "Alpha Fund research assistant, for owner approval",
+    "reviewed_on": "2026-11-02",
+    "evidence": "Exact registrant name on the cover of the 10-K for 2025: SLB N.V. (SLB Limited) (SLB on the NYSE). The 10-K states the company changed its brand name to SLB in 2022 and the legal name of its listed parent company in 2025.",
+    "ambiguity": "Formerly Schlumberger N.V. (Schlumberger Limited); renamed in 2025. The Nasdaq Trader directory lists the alternative form SLB Limited; the reference list still uses Schlumberger. Same issuer (CIK 0000087347).",
+    "sources": [
+      {"name": "SEC EDGAR, SLB N.V. (SLB Limited) 10-K for 2025", "url": "https://www.sec.gov/Archives/edgar/data/87347/000119312526021017/slb-20251231.htm"}
+    ]
+  }
+}

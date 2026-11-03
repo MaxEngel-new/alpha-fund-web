@@ -1,0 +1,7 @@
+# Never upload private review material or unapproved candidates, even from a local `vercel deploy`.
+src/data/candidates/
+src/data/holdings/candidates/
+exporter/APPROVAL.md
+exporter/name_sources/
+SPRINT_17_REPORT.md
+SPRINT_18_REPORT.md

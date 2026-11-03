@@ -1,0 +1,1264 @@
+{
+  "meta": {
+    "built_at": "2026-11-02T20:02:43+00:00",
+    "basis": "Current listed issuer names on the retrieval date; not historical issuer identities.",
+    "historical_identity_check": "not run (needs --sec-contact)",
+    "sources": [
+      {
+        "name": "Nasdaq Trader symbol directory",
+        "url": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "sha256": "311d0e2990536a85f7fb25f22600d02fbe13fb9281ac971d43cceb705120d8c3"
+      },
+      {
+        "name": "Nasdaq Trader symbol directory (other exchanges)",
+        "url": "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "sha256": "62587f0b2de1640daaeeb803f028c97f8d451b17c3df2d21b4e1fc98fdd5ea2f",
+        "file_created": "1102202614"
+      },
+      {
+        "name": "Wikipedia, List of S&P 500 companies",
+        "url": "https://en.wikipedia.org/w/index.php?title=List_of_S%26P_500_companies&oldid=1382178819",
+        "revision": "1382178819",
+        "sha256": "643feef48d6d423924fea9adcd360bd8dcdaf51f8f67bc210a71f65d005f6e69"
+      }
+    ],
+    "rules": [
+      "Tickers are kept exactly as recorded; the exchange symbol replaces '-' with '.' (share-class separator).",
+      "Company name = exchange listing name with the security description and listing qualifiers such as (REIT) removed.",
+      "Verified only if the listing and the independent reference agree on the issuer; otherwise needs_review and not published."
+    ],
+    "verified": 102,
+    "owner_reviewed": [],
+    "issuer_verified": [
+      "HON",
+      "IBM",
+      "JPM",
+      "SLB"
+    ],
+    "needs_review": []
+  },
+  "names": {
+    "AAPL": {
+      "exchange_symbol": "AAPL",
+      "company": "Apple Inc.",
+      "status": "verified",
+      "issuer_cik": "0000320193",
+      "listing_name": "Apple Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Apple Inc.",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "ABBV": {
+      "exchange_symbol": "ABBV",
+      "company": "AbbVie Inc.",
+      "status": "verified",
+      "issuer_cik": "0001551152",
+      "listing_name": "AbbVie Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "AbbVie",
+      "successor_entity": true,
+      "review_reason": null
+    },
+    "ABT": {
+      "exchange_symbol": "ABT",
+      "company": "Abbott Laboratories",
+      "status": "verified",
+      "issuer_cik": "0000001800",
+      "listing_name": "Abbott Laboratories Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Abbott Laboratories",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "ACN": {
+      "exchange_symbol": "ACN",
+      "company": "Accenture plc",
+      "status": "verified",
+      "issuer_cik": "0001467373",
+      "listing_name": "Accenture plc Class A Ordinary Shares (Ireland)",
+      "exchange": "NYSE",
+      "reference_name": "Accenture",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "ADBE": {
+      "exchange_symbol": "ADBE",
+      "company": "Adobe Inc.",
+      "status": "verified",
+      "issuer_cik": "0000796343",
+      "listing_name": "Adobe Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Adobe Inc.",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "ADP": {
+      "exchange_symbol": "ADP",
+      "company": "Automatic Data Processing, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000008670",
+      "listing_name": "Automatic Data Processing, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Automatic Data Processing",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "AIG": {
+      "exchange_symbol": "AIG",
+      "company": "American International Group, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000005272",
+      "listing_name": "American International Group, Inc. New Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "American International Group",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "AMD": {
+      "exchange_symbol": "AMD",
+      "company": "Advanced Micro Devices, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000002488",
+      "listing_name": "Advanced Micro Devices, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Advanced Micro Devices",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "AMGN": {
+      "exchange_symbol": "AMGN",
+      "company": "Amgen Inc.",
+      "status": "verified",
+      "issuer_cik": "0000318154",
+      "listing_name": "Amgen Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Amgen",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "AMT": {
+      "exchange_symbol": "AMT",
+      "company": "American Tower Corporation",
+      "status": "verified",
+      "issuer_cik": "0001053507",
+      "listing_name": "American Tower Corporation (REIT) Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "American Tower",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "AMZN": {
+      "exchange_symbol": "AMZN",
+      "company": "Amazon.com, Inc.",
+      "status": "verified",
+      "issuer_cik": "0001018724",
+      "listing_name": "Amazon.com, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Amazon",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "AVGO": {
+      "exchange_symbol": "AVGO",
+      "company": "Broadcom Inc.",
+      "status": "verified",
+      "issuer_cik": "0001730168",
+      "listing_name": "Broadcom Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Broadcom",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "AXP": {
+      "exchange_symbol": "AXP",
+      "company": "American Express Company",
+      "status": "verified",
+      "issuer_cik": "0000004962",
+      "listing_name": "American Express Company Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "American Express",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "BA": {
+      "exchange_symbol": "BA",
+      "company": "The Boeing Company",
+      "status": "verified",
+      "issuer_cik": "0000012927",
+      "listing_name": "Boeing Company (The) Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Boeing",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "BAC": {
+      "exchange_symbol": "BAC",
+      "company": "Bank of America Corporation",
+      "status": "verified",
+      "issuer_cik": "0000070858",
+      "listing_name": "Bank of America Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Bank of America",
+      "successor_entity": true,
+      "review_reason": null
+    },
+    "BKNG": {
+      "exchange_symbol": "BKNG",
+      "company": "Booking Holdings Inc.",
+      "status": "verified",
+      "issuer_cik": "0001075531",
+      "listing_name": "Booking Holdings Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Booking Holdings",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "BLK": {
+      "exchange_symbol": "BLK",
+      "company": "BlackRock, Inc.",
+      "status": "verified",
+      "issuer_cik": "0002012383",
+      "listing_name": "BlackRock, Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "BlackRock",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "BMY": {
+      "exchange_symbol": "BMY",
+      "company": "Bristol-Myers Squibb Company",
+      "status": "verified",
+      "issuer_cik": "0000014272",
+      "listing_name": "Bristol-Myers Squibb Company Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Bristol Myers Squibb",
+      "successor_entity": true,
+      "review_reason": null
+    },
+    "BRK-B": {
+      "exchange_symbol": "BRK.B",
+      "company": "Berkshire Hathaway Inc.",
+      "status": "verified",
+      "issuer_cik": "0001067983",
+      "listing_name": "Berkshire Hathaway Inc. New Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Berkshire Hathaway",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "C": {
+      "exchange_symbol": "C",
+      "company": "Citigroup, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000831001",
+      "listing_name": "Citigroup, Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Citigroup",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "CAT": {
+      "exchange_symbol": "CAT",
+      "company": "Caterpillar, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000018230",
+      "listing_name": "Caterpillar, Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Caterpillar Inc.",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "CI": {
+      "exchange_symbol": "CI",
+      "company": "The Cigna Group",
+      "status": "verified",
+      "issuer_cik": "0001739940",
+      "listing_name": "The Cigna Group Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Cigna",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "CL": {
+      "exchange_symbol": "CL",
+      "company": "Colgate-Palmolive Company",
+      "status": "verified",
+      "issuer_cik": "0000021665",
+      "listing_name": "Colgate-Palmolive Company Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Colgate-Palmolive",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "CMCSA": {
+      "exchange_symbol": "CMCSA",
+      "company": "Comcast Corporation",
+      "status": "verified",
+      "issuer_cik": "0001166691",
+      "listing_name": "Comcast Corporation - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Comcast",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "COF": {
+      "exchange_symbol": "COF",
+      "company": "Capital One Financial Corporation",
+      "status": "verified",
+      "issuer_cik": "0000927628",
+      "listing_name": "Capital One Financial Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Capital One",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "COP": {
+      "exchange_symbol": "COP",
+      "company": "ConocoPhillips",
+      "status": "verified",
+      "issuer_cik": "0001163165",
+      "listing_name": "ConocoPhillips Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "ConocoPhillips",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "COST": {
+      "exchange_symbol": "COST",
+      "company": "Costco Wholesale Corporation",
+      "status": "verified",
+      "issuer_cik": "0000909832",
+      "listing_name": "Costco Wholesale Corporation - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Costco",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "CRM": {
+      "exchange_symbol": "CRM",
+      "company": "Salesforce, Inc.",
+      "status": "verified",
+      "issuer_cik": "0001108524",
+      "listing_name": "Salesforce, Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Salesforce",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "CSCO": {
+      "exchange_symbol": "CSCO",
+      "company": "Cisco Systems, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000858877",
+      "listing_name": "Cisco Systems, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Cisco",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "CSX": {
+      "exchange_symbol": "CSX",
+      "company": "CSX Corporation",
+      "status": "verified",
+      "issuer_cik": "0000277948",
+      "listing_name": "CSX Corporation - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "CSX Corporation",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "CVS": {
+      "exchange_symbol": "CVS",
+      "company": "CVS Health Corporation",
+      "status": "verified",
+      "issuer_cik": "0000064803",
+      "listing_name": "CVS Health Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "CVS Health",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "CVX": {
+      "exchange_symbol": "CVX",
+      "company": "Chevron Corporation",
+      "status": "verified",
+      "issuer_cik": "0000093410",
+      "listing_name": "Chevron Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Chevron Corporation",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "D": {
+      "exchange_symbol": "D",
+      "company": "Dominion Energy, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000715957",
+      "listing_name": "Dominion Energy, Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Dominion Energy",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "DE": {
+      "exchange_symbol": "DE",
+      "company": "Deere & Company",
+      "status": "verified",
+      "issuer_cik": "0000315189",
+      "listing_name": "Deere & Company Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Deere & Company",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "DHR": {
+      "exchange_symbol": "DHR",
+      "company": "Danaher Corporation",
+      "status": "verified",
+      "issuer_cik": "0000313616",
+      "listing_name": "Danaher Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Danaher Corporation",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "DIS": {
+      "exchange_symbol": "DIS",
+      "company": "The Walt Disney Company",
+      "status": "verified",
+      "issuer_cik": "0001744489",
+      "listing_name": "Walt Disney Company (The) Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Walt Disney Company (The)",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "DUK": {
+      "exchange_symbol": "DUK",
+      "company": "Duke Energy Corporation",
+      "status": "verified",
+      "issuer_cik": "0001326160",
+      "listing_name": "Duke Energy Corporation (Holding Company) Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Duke Energy",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "EOG": {
+      "exchange_symbol": "EOG",
+      "company": "EOG Resources, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000821189",
+      "listing_name": "EOG Resources, Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "EOG Resources",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "EXC": {
+      "exchange_symbol": "EXC",
+      "company": "Exelon Corporation",
+      "status": "verified",
+      "issuer_cik": "0001109357",
+      "listing_name": "Exelon Corporation - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Exelon",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "F": {
+      "exchange_symbol": "F",
+      "company": "Ford Motor Company",
+      "status": "verified",
+      "issuer_cik": "0000037996",
+      "listing_name": "Ford Motor Company Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Ford Motor Company",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "FDX": {
+      "exchange_symbol": "FDX",
+      "company": "FedEx Corporation",
+      "status": "verified",
+      "issuer_cik": "0001048911",
+      "listing_name": "FedEx Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "FedEx",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "GD": {
+      "exchange_symbol": "GD",
+      "company": "General Dynamics Corporation",
+      "status": "verified",
+      "issuer_cik": "0000040533",
+      "listing_name": "General Dynamics Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "General Dynamics",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "GE": {
+      "exchange_symbol": "GE",
+      "company": "GE Aerospace",
+      "status": "verified",
+      "issuer_cik": "0000040545",
+      "listing_name": "GE Aerospace Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "GE Aerospace",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "GILD": {
+      "exchange_symbol": "GILD",
+      "company": "Gilead Sciences, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000882095",
+      "listing_name": "Gilead Sciences, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Gilead Sciences",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "GM": {
+      "exchange_symbol": "GM",
+      "company": "General Motors Company",
+      "status": "verified",
+      "issuer_cik": "0001467858",
+      "listing_name": "General Motors Company Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "General Motors",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "GOOGL": {
+      "exchange_symbol": "GOOGL",
+      "company": "Alphabet Inc.",
+      "status": "verified",
+      "issuer_cik": "0001652044",
+      "listing_name": "Alphabet Inc. - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Alphabet Inc. (Class A)",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "GS": {
+      "exchange_symbol": "GS",
+      "company": "The Goldman Sachs Group, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000886982",
+      "listing_name": "Goldman Sachs Group, Inc. (The) Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Goldman Sachs",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "HD": {
+      "exchange_symbol": "HD",
+      "company": "The Home Depot, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000354950",
+      "listing_name": "Home Depot, Inc. (The) Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Home Depot (The)",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "HON": {
+      "exchange_symbol": "HON",
+      "company": "Honeywell International Inc.",
+      "status": "issuer_verified",
+      "issuer_cik": "0000773840",
+      "listing_name": "Honeywell International Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Honeywell Technologies",
+      "successor_entity": false,
+      "review_reason": "listing issuer 'Honeywell International Inc.' and reference 'Honeywell Technologies' do not agree; resolved by Alpha Fund research assistant, for owner approval: Exact registrant name on the cover of the 10-Q for the period ended 2026-09-30 (filed 2026-10-22): Honeywell International Inc. (Delaware; HON on Nasdaq). Matches the Nasdaq Trader listing name and the SEC registrant record.",
+      "verification": {
+        "reviewed_by": "Alpha Fund research assistant, for owner approval",
+        "reviewed_on": "2026-11-02",
+        "sources": [
+          {
+            "name": "SEC EDGAR, Honeywell International Inc. 10-Q for the period ended 2026-09-30",
+            "url": "https://www.sec.gov/Archives/edgar/data/773840/000077384026000143/hon-20260930.htm"
+          },
+          {
+            "name": "Honeywell press release, 2026-06-15: Board approves spin-off of Honeywell Aerospace",
+            "url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-approves-spin-off-of-honeywell-aerospace"
+          }
+        ],
+        "ambiguity": "Since the Honeywell Aerospace spin-off (completed 2026-06-29) the company operates under the business name Honeywell Technologies; its legal name did not change. Honeywell Aerospace Inc. (HONA, CIK 0002089271) is a separate issuer. HON's price history before 2026-06-29 includes the aerospace business."
+      }
+    },
+    "IBM": {
+      "exchange_symbol": "IBM",
+      "company": "International Business Machines Corporation",
+      "status": "issuer_verified",
+      "issuer_cik": "0000051143",
+      "listing_name": "International Business Machines Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "IBM",
+      "successor_entity": false,
+      "review_reason": "listing issuer 'International Business Machines Corporation' and reference 'IBM' do not agree; resolved by Alpha Fund research assistant, for owner approval: Exact registrant name on the cover of the 10-Q for the period ended 2026-09-30 (filed 2026-10-22): INTERNATIONAL BUSINESS MACHINES CORPORATION (New York; IBM on the NYSE). Shown in the listing's capitalization, as in the Nasdaq Trader directory.",
+      "verification": {
+        "reviewed_by": "Alpha Fund research assistant, for owner approval",
+        "reviewed_on": "2026-11-02",
+        "sources": [
+          {
+            "name": "SEC EDGAR, International Business Machines Corporation 10-Q for the period ended 2026-09-30",
+            "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114326000095/ibm-20260930.htm"
+          }
+        ],
+        "ambiguity": "None: IBM is the common abbreviation of the legal name; the flag came only from the reference list using the abbreviation."
+      }
+    },
+    "INTC": {
+      "exchange_symbol": "INTC",
+      "company": "Intel Corporation",
+      "status": "verified",
+      "issuer_cik": "0000050863",
+      "listing_name": "Intel Corporation - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Intel",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "INTU": {
+      "exchange_symbol": "INTU",
+      "company": "Intuit Inc.",
+      "status": "verified",
+      "issuer_cik": "0000896878",
+      "listing_name": "Intuit Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Intuit",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "ISRG": {
+      "exchange_symbol": "ISRG",
+      "company": "Intuitive Surgical, Inc.",
+      "status": "verified",
+      "issuer_cik": "0001035267",
+      "listing_name": "Intuitive Surgical, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Intuitive Surgical",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "JNJ": {
+      "exchange_symbol": "JNJ",
+      "company": "Johnson & Johnson",
+      "status": "verified",
+      "issuer_cik": "0000200406",
+      "listing_name": "Johnson & Johnson Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Johnson & Johnson",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "JPM": {
+      "exchange_symbol": "JPM",
+      "company": "JPMorgan Chase & Co.",
+      "status": "issuer_verified",
+      "issuer_cik": "0000019617",
+      "listing_name": "JP Morgan Chase & Co. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "JPMorgan Chase",
+      "successor_entity": true,
+      "review_reason": "listing issuer 'JP Morgan Chase & Co.' and reference 'JPMorgan Chase' do not agree; resolved by Alpha Fund research assistant, for owner approval: Registrant name in the cover-page data of the 10-Q for the period ended 2026-06-30: JPMorgan Chase & Co (Delaware; JPM on the NYSE); the company's investor-relations site states its name as JPMorgan Chase & Co.",
+      "verification": {
+        "reviewed_by": "Alpha Fund research assistant, for owner approval",
+        "reviewed_on": "2026-11-02",
+        "sources": [
+          {
+            "name": "SEC EDGAR, JPMorgan Chase & Co. 10-Q cover page data, period ended 2026-06-30",
+            "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026054343/R1.htm"
+          },
+          {
+            "name": "SEC EDGAR company record, CIK 0000019617 (former names)",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617"
+          },
+          {
+            "name": "JPMorgan Chase & Co. investor relations",
+            "url": "https://www.jpmorganchase.com/ir"
+          }
+        ],
+        "ambiguity": "The Nasdaq Trader directory lists 'JP Morgan Chase & Co.', close to the registrant's pre-2011 SEC name (J P Morgan Chase & Co); the current legal name is JPMorgan Chase & Co. The brand is written JPMorganChase."
+      }
+    },
+    "KHC": {
+      "exchange_symbol": "KHC",
+      "company": "The Kraft Heinz Company",
+      "status": "verified",
+      "issuer_cik": "0001637459",
+      "listing_name": "The Kraft Heinz Company Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Kraft Heinz",
+      "successor_entity": true,
+      "review_reason": null
+    },
+    "KMI": {
+      "exchange_symbol": "KMI",
+      "company": "Kinder Morgan, Inc.",
+      "status": "verified",
+      "issuer_cik": "0001506307",
+      "listing_name": "Kinder Morgan, Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Kinder Morgan",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "KO": {
+      "exchange_symbol": "KO",
+      "company": "The Coca-Cola Company",
+      "status": "verified",
+      "issuer_cik": "0000021344",
+      "listing_name": "Coca-Cola Company (The) Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Coca-Cola Company (The)",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "LIN": {
+      "exchange_symbol": "LIN",
+      "company": "Linde plc",
+      "status": "verified",
+      "issuer_cik": "0001707925",
+      "listing_name": "Linde plc - Ordinary Shares",
+      "exchange": "NASDAQ",
+      "reference_name": "Linde plc",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "LLY": {
+      "exchange_symbol": "LLY",
+      "company": "Eli Lilly and Company",
+      "status": "verified",
+      "issuer_cik": "0000059478",
+      "listing_name": "Eli Lilly and Company Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Lilly (Eli)",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "LMT": {
+      "exchange_symbol": "LMT",
+      "company": "Lockheed Martin Corporation",
+      "status": "verified",
+      "issuer_cik": "0000936468",
+      "listing_name": "Lockheed Martin Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Lockheed Martin",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "LOW": {
+      "exchange_symbol": "LOW",
+      "company": "Lowe's Companies, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000060667",
+      "listing_name": "Lowe's Companies, Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Lowe's",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "MA": {
+      "exchange_symbol": "MA",
+      "company": "Mastercard Incorporated",
+      "status": "verified",
+      "issuer_cik": "0001141391",
+      "listing_name": "Mastercard Incorporated Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Mastercard",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "MCD": {
+      "exchange_symbol": "MCD",
+      "company": "McDonald's Corporation",
+      "status": "verified",
+      "issuer_cik": "0000063908",
+      "listing_name": "McDonald's Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "McDonald's",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "MDLZ": {
+      "exchange_symbol": "MDLZ",
+      "company": "Mondelez International, Inc.",
+      "status": "verified",
+      "issuer_cik": "0001103982",
+      "listing_name": "Mondelez International, Inc. - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Mondelez International",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "MDT": {
+      "exchange_symbol": "MDT",
+      "company": "Medtronic plc.",
+      "status": "verified",
+      "issuer_cik": "0001613103",
+      "listing_name": "Medtronic plc. Ordinary Shares",
+      "exchange": "NYSE",
+      "reference_name": "Medtronic",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "MET": {
+      "exchange_symbol": "MET",
+      "company": "MetLife, Inc.",
+      "status": "verified",
+      "issuer_cik": "0001099219",
+      "listing_name": "MetLife, Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "MetLife",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "META": {
+      "exchange_symbol": "META",
+      "company": "Meta Platforms, Inc.",
+      "status": "verified",
+      "issuer_cik": "0001326801",
+      "listing_name": "Meta Platforms, Inc. - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Meta Platforms",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "MMM": {
+      "exchange_symbol": "MMM",
+      "company": "3M Company",
+      "status": "verified",
+      "issuer_cik": "0000066740",
+      "listing_name": "3M Company Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "3M",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "MO": {
+      "exchange_symbol": "MO",
+      "company": "Altria Group, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000764180",
+      "listing_name": "Altria Group, Inc.",
+      "exchange": "NYSE",
+      "reference_name": "Altria",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "MRK": {
+      "exchange_symbol": "MRK",
+      "company": "Merck & Company, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000310158",
+      "listing_name": "Merck & Company, Inc. Common Stock (new)",
+      "exchange": "NYSE",
+      "reference_name": "Merck & Co.",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "MS": {
+      "exchange_symbol": "MS",
+      "company": "Morgan Stanley",
+      "status": "verified",
+      "issuer_cik": "0000895421",
+      "listing_name": "Morgan Stanley Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Morgan Stanley",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "MSFT": {
+      "exchange_symbol": "MSFT",
+      "company": "Microsoft Corporation",
+      "status": "verified",
+      "issuer_cik": "0000789019",
+      "listing_name": "Microsoft Corporation - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Microsoft",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "NEE": {
+      "exchange_symbol": "NEE",
+      "company": "NextEra Energy, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000753308",
+      "listing_name": "NextEra Energy, Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "NextEra Energy",
+      "successor_entity": true,
+      "review_reason": null
+    },
+    "NFLX": {
+      "exchange_symbol": "NFLX",
+      "company": "Netflix, Inc.",
+      "status": "verified",
+      "issuer_cik": "0001065280",
+      "listing_name": "Netflix, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Netflix",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "NKE": {
+      "exchange_symbol": "NKE",
+      "company": "Nike, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000320187",
+      "listing_name": "Nike, Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Nike, Inc.",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "NOC": {
+      "exchange_symbol": "NOC",
+      "company": "Northrop Grumman Corporation",
+      "status": "verified",
+      "issuer_cik": "0001133421",
+      "listing_name": "Northrop Grumman Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Northrop Grumman",
+      "successor_entity": true,
+      "review_reason": null
+    },
+    "NVDA": {
+      "exchange_symbol": "NVDA",
+      "company": "NVIDIA Corporation",
+      "status": "verified",
+      "issuer_cik": "0001045810",
+      "listing_name": "NVIDIA Corporation - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Nvidia",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "ORCL": {
+      "exchange_symbol": "ORCL",
+      "company": "Oracle Corporation",
+      "status": "verified",
+      "issuer_cik": "0001341439",
+      "listing_name": "Oracle Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Oracle Corporation",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "OXY": {
+      "exchange_symbol": "OXY",
+      "company": "Occidental Petroleum Corporation",
+      "status": "verified",
+      "issuer_cik": "0000797468",
+      "listing_name": "Occidental Petroleum Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Occidental Petroleum",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "PEP": {
+      "exchange_symbol": "PEP",
+      "company": "PepsiCo, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000077476",
+      "listing_name": "PepsiCo, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "PepsiCo",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "PFE": {
+      "exchange_symbol": "PFE",
+      "company": "Pfizer, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000078003",
+      "listing_name": "Pfizer, Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Pfizer",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "PG": {
+      "exchange_symbol": "PG",
+      "company": "The Procter & Gamble Company",
+      "status": "verified",
+      "issuer_cik": "0000080424",
+      "listing_name": "Procter & Gamble Company (The) Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Procter & Gamble",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "PM": {
+      "exchange_symbol": "PM",
+      "company": "Philip Morris International Inc",
+      "status": "verified",
+      "issuer_cik": "0001413329",
+      "listing_name": "Philip Morris International Inc Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Philip Morris International",
+      "successor_entity": true,
+      "review_reason": null
+    },
+    "PNC": {
+      "exchange_symbol": "PNC",
+      "company": "The PNC Financial Services Group, Inc.",
+      "status": "verified",
+      "issuer_cik": "0000713676",
+      "listing_name": "PNC Financial Services Group, Inc. (The) Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "PNC Financial Services",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "PYPL": {
+      "exchange_symbol": "PYPL",
+      "company": "PayPal Holdings, Inc.",
+      "status": "verified",
+      "issuer_cik": "0001633917",
+      "listing_name": "PayPal Holdings, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "PayPal",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "QCOM": {
+      "exchange_symbol": "QCOM",
+      "company": "QUALCOMM Incorporated",
+      "status": "verified",
+      "issuer_cik": "0000804328",
+      "listing_name": "QUALCOMM Incorporated - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Qualcomm",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "RTX": {
+      "exchange_symbol": "RTX",
+      "company": "RTX Corporation",
+      "status": "verified",
+      "issuer_cik": "0000101829",
+      "listing_name": "RTX Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "RTX Corporation",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "SBUX": {
+      "exchange_symbol": "SBUX",
+      "company": "Starbucks Corporation",
+      "status": "verified",
+      "issuer_cik": "0000829224",
+      "listing_name": "Starbucks Corporation - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Starbucks",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "SCHW": {
+      "exchange_symbol": "SCHW",
+      "company": "The Charles Schwab Corporation",
+      "status": "verified",
+      "issuer_cik": "0000316709",
+      "listing_name": "Charles Schwab Corporation (The) Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Charles Schwab Corporation",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "SLB": {
+      "exchange_symbol": "SLB",
+      "company": "SLB N.V. (SLB Limited)",
+      "status": "issuer_verified",
+      "issuer_cik": "0000087347",
+      "listing_name": "SLB Limited Common Shares",
+      "exchange": "NYSE",
+      "reference_name": "Schlumberger",
+      "successor_entity": false,
+      "review_reason": "listing issuer 'SLB Limited' and reference 'Schlumberger' do not agree; resolved by Alpha Fund research assistant, for owner approval: Exact registrant name on the cover of the 10-K for 2025: SLB N.V. (SLB Limited) (SLB on the NYSE). The 10-K states the company changed its brand name to SLB in 2022 and the legal name of its listed parent company in 2025.",
+      "verification": {
+        "reviewed_by": "Alpha Fund research assistant, for owner approval",
+        "reviewed_on": "2026-11-02",
+        "sources": [
+          {
+            "name": "SEC EDGAR, SLB N.V. (SLB Limited) 10-K for 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/87347/000119312526021017/slb-20251231.htm"
+          }
+        ],
+        "ambiguity": "Formerly Schlumberger N.V. (Schlumberger Limited); renamed in 2025. The Nasdaq Trader directory lists the alternative form SLB Limited; the reference list still uses Schlumberger. Same issuer (CIK 0000087347)."
+      }
+    },
+    "SO": {
+      "exchange_symbol": "SO",
+      "company": "The Southern Company",
+      "status": "verified",
+      "issuer_cik": "0000092122",
+      "listing_name": "Southern Company (The) Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Southern Company",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "SPG": {
+      "exchange_symbol": "SPG",
+      "company": "Simon Property Group, Inc.",
+      "status": "verified",
+      "issuer_cik": "0001063761",
+      "listing_name": "Simon Property Group, Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Simon Property Group",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "T": {
+      "exchange_symbol": "T",
+      "company": "AT&T Inc.",
+      "status": "verified",
+      "issuer_cik": "0000732717",
+      "listing_name": "AT&T Inc.",
+      "exchange": "NYSE",
+      "reference_name": "AT&T",
+      "successor_entity": true,
+      "review_reason": null
+    },
+    "TGT": {
+      "exchange_symbol": "TGT",
+      "company": "Target Corporation",
+      "status": "verified",
+      "issuer_cik": "0000027419",
+      "listing_name": "Target Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Target Corporation",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "TMO": {
+      "exchange_symbol": "TMO",
+      "company": "Thermo Fisher Scientific Inc",
+      "status": "verified",
+      "issuer_cik": "0000097745",
+      "listing_name": "Thermo Fisher Scientific Inc Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Thermo Fisher Scientific",
+      "successor_entity": true,
+      "review_reason": null
+    },
+    "TXN": {
+      "exchange_symbol": "TXN",
+      "company": "Texas Instruments Incorporated",
+      "status": "verified",
+      "issuer_cik": "0000097476",
+      "listing_name": "Texas Instruments Incorporated - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Texas Instruments",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "UNH": {
+      "exchange_symbol": "UNH",
+      "company": "UnitedHealth Group Incorporated",
+      "status": "verified",
+      "issuer_cik": "0000731766",
+      "listing_name": "UnitedHealth Group Incorporated Common Stock (DE)",
+      "exchange": "NYSE",
+      "reference_name": "UnitedHealth Group",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "UNP": {
+      "exchange_symbol": "UNP",
+      "company": "Union Pacific Corporation",
+      "status": "verified",
+      "issuer_cik": "0000100885",
+      "listing_name": "Union Pacific Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Union Pacific Corporation",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "UPS": {
+      "exchange_symbol": "UPS",
+      "company": "United Parcel Service, Inc.",
+      "status": "verified",
+      "issuer_cik": "0001090727",
+      "listing_name": "United Parcel Service, Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "United Parcel Service",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "USB": {
+      "exchange_symbol": "USB",
+      "company": "U.S. Bancorp",
+      "status": "verified",
+      "issuer_cik": "0000036104",
+      "listing_name": "U.S. Bancorp Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "U.S. Bancorp",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "V": {
+      "exchange_symbol": "V",
+      "company": "Visa Inc.",
+      "status": "verified",
+      "issuer_cik": "0001403161",
+      "listing_name": "Visa Inc.",
+      "exchange": "NYSE",
+      "reference_name": "Visa Inc.",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "VZ": {
+      "exchange_symbol": "VZ",
+      "company": "Verizon Communications Inc.",
+      "status": "verified",
+      "issuer_cik": "0000732712",
+      "listing_name": "Verizon Communications Inc. Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Verizon",
+      "successor_entity": true,
+      "review_reason": null
+    },
+    "WFC": {
+      "exchange_symbol": "WFC",
+      "company": "Wells Fargo & Company",
+      "status": "verified",
+      "issuer_cik": "0000072971",
+      "listing_name": "Wells Fargo & Company Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "Wells Fargo",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "WMT": {
+      "exchange_symbol": "WMT",
+      "company": "Walmart Inc.",
+      "status": "verified",
+      "issuer_cik": "0000104169",
+      "listing_name": "Walmart Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "reference_name": "Walmart",
+      "successor_entity": false,
+      "review_reason": null
+    },
+    "XOM": {
+      "exchange_symbol": "XOM",
+      "company": "ExxonMobil Holdings Corporation",
+      "status": "verified",
+      "issuer_cik": "0002115436",
+      "listing_name": "ExxonMobil Holdings Corporation Common Stock",
+      "exchange": "NYSE",
+      "reference_name": "ExxonMobil",
+      "successor_entity": false,
+      "review_reason": null
+    }
+  }
+}

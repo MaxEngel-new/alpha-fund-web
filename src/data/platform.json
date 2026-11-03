@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "source_report": [
+      "README.md",
+      "PROJECT.md",
+      "ARCHITECTURE.md",
+      "SPRINT_16_REPORT.md",
+      "docs/audits/sprint12_results.json"
+    ],
+    "generated_at": "2026-10-26T02:11:26+00:00",
+    "classification": "Platform facts (engineering status)",
+    "period": "project history 2026-07-28 to 2026-10-21",
+    "methodology_ref": "/methodology",
+    "backend_commit": "0723c91"
+  },
+  "data": {
+    "tests_passing": 944,
+    "sprints_complete": 16,
+    "capabilities": [
+      {
+        "title": "Market data",
+        "text": "Free daily data from Yahoo Finance with batched, cached, retrying ingestion and data-quality checks. The live pipeline also quarantines suspicious rows and logs revisions."
+      },
+      {
+        "title": "Portfolio accounting",
+        "text": "Cash-only accounts by default; margin research only when explicitly enabled. Accounting invariants are checked on every simulated bar."
+      },
+      {
+        "title": "Execution and costs",
+        "text": "Scheduled rebalancing, no-trade bands, minimum trade sizes, turnover budgets and one explicit transaction-cost convention."
+      },
+      {
+        "title": "Machine learning",
+        "text": "Purged walk-forward validation, six model types including XGBoost and LightGBM, and a model store with feature-schema hashes."
+      },
+      {
+        "title": "Statistics",
+        "text": "Overlap-robust inference, multiple-testing correction and pre-registered hypotheses with evidence-based verdicts."
+      },
+      {
+        "title": "Risk management",
+        "text": "Optional adaptive drawdown and volatility-target overlays; the most restrictive limit always wins."
+      },
+      {
+        "title": "Prospective research",
+        "text": "An append-only, hash-chained ledger that labels a decision prospective only when its timestamps prove it."
+      },
+      {
+        "title": "Monitoring",
+        "text": "Read-only health checks, ledger diagnosis and an end-to-end reproducibility audit."
+      }
+    ],
+    "universe": {
+      "name": "us_liquid_100",
+      "source": "hand-compiled approximation of current S&P 100 members (not an official list)",
+      "candidates": 108,
+      "usable": 106,
+      "excluded": {
+        "BK": "no data returned",
+        "TMUS": "price jumps on split dates: split not adjusted"
+      },
+      "benchmark": "SPY",
+      "history": "2008-01-02 to 2026-09-30 (research data)",
+      "survivorship_bias_free": false
+    }
+  }
+}

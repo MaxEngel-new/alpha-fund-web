@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "source_report": [
+      "configs/financial.yaml",
+      "configs/sprint12_research.yaml",
+      "configs/prospective.yaml",
+      "ARCHITECTURE.md"
+    ],
+    "generated_at": "2026-10-26T02:11:26+00:00",
+    "classification": "Methodology and assumptions",
+    "period": "as configured at the backend commit",
+    "methodology_ref": "/methodology",
+    "backend_commit": "0723c91"
+  },
+  "data": {
+    "financial": {
+      "initial_capital": 1000000.0,
+      "costs": {
+        "commission_bps": 5.0,
+        "half_spread_bps": 0.0,
+        "slippage_bps": 5.0,
+        "commission_per_order": 0.0
+      },
+      "account": {
+        "mode": "cash_only",
+        "allow_fractional_shares": true,
+        "cash_interest_rate": 0.0,
+        "initial_margin_long": 0.5,
+        "initial_margin_short": 0.5,
+        "maintenance_margin_long": 0.25,
+        "maintenance_margin_short": 0.3,
+        "financing_rate": 0.05,
+        "short_borrow_fee": 0.03,
+        "shortable_symbols": null
+      },
+      "corporate_actions": {
+        "price_column": "close",
+        "apply_dividends": true,
+        "prices_split_adjusted": true
+      },
+      "risk_rules": [
+        {
+          "name": "max_position_size",
+          "params": {
+            "max_weight": 0.5
+          }
+        },
+        {
+          "name": "max_gross_exposure",
+          "params": {
+            "max_gross": 1.5
+          }
+        },
+        {
+          "name": "max_drawdown_stop",
+          "params": {
+            "max_drawdown": 0.25
+          }
+        },
+        {
+          "name": "daily_loss_limit",
+          "params": {
+            "max_daily_loss": 0.05
+          }
+        }
+      ]
+    },
+    "eligibility": {
+      "min_history_days": 252,
+      "min_price": 5.0,
+      "liquidity_lookback": 63,
+      "min_median_dollar_volume": 10000000.0
+    },
+    "settle_minutes": 60,
+    "market_close": "16:00"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "source_report": [
+      "data/prospective/ledger.jsonl (record counts only)",
+      "configs/prospective.yaml",
+      "configs/prospective_research_question.yaml",
+      "SPRINT_15_REPORT.md",
+      "SPRINT_16_REPORT.md"
+    ],
+    "generated_at": "2026-11-02T19:20:40+00:00",
+    "classification": "PROSPECTIVE research: decisions recorded; no simulated fills or performance yet",
+    "period": "from the first decision session (2026-10-30)",
+    "methodology_ref": "/methodology#prospective",
+    "backend_commit": "c9f1797",
+    "config_sha256": "d7134a1a6c73c2f78cff993806aee350c586d456803737e3647dfc9bac5bc4c3",
+    "question_sha256": "dd874cd2f6e3d957df53b6af5316fb1cb64218ecc7aece8ad9a470dd86371f3e",
+    "ledger_head_hash": "f6cc1e3e2a75209c0e21f7a81cf66aabefa9007d33c9e0a5a5eed41a83dc373d",
+    "anchored_at_remote_head": "c9f1797"
+  },
+  "data": {
+    "status": "decisions_recorded",
+    "prospective_records": 8,
+    "record": {
+      "ledger_events": 8,
+      "decisions": 4,
+      "observations": 4,
+      "other_events": 0,
+      "decision_sessions": [
+        "2026-10-30"
+      ],
+      "decisions_per_session": {
+        "2026-10-30": 4
+      },
+      "first_recorded_at": "2026-11-02T07:37:10Z",
+      "simulated_fills": 0,
+      "observations_with_simulated_holdings": 0,
+      "performance": "not_available",
+      "explanation": "4 prospective decisions (one per frozen portfolio) are recorded as 8 ledger events: 4 decisions and 4 observations of each paper portfolio's starting state. A decision is a recorded target allocation, not a trade. Simulated fills recorded so far: 0. Investment performance: none yet; it starts only once the decisions have been filled in the paper portfolios and observed in a later recording."
+    },
+    "books": [
+      {
+        "id": "equal_weight",
+        "label": "Equal Weight",
+        "version": 1,
+        "overlay": "none",
+        "strategy": "equal_weight",
+        "params": {
+          "eligibility_column": "eligible"
+        },
+        "book_hash": "d31668a580329a9b"
+      },
+      {
+        "id": "equal_weight_adaptive",
+        "label": "Equal Weight + Adaptive Risk",
+        "version": 1,
+        "overlay": "combined",
+        "strategy": "equal_weight",
+        "params": {
+          "eligibility_column": "eligible"
+        },
+        "book_hash": "57845e6aed426243"
+      },
+      {
+        "id": "momentum_12_1",
+        "label": "12-1 Momentum",
+        "version": 1,
+        "overlay": "none",
+        "strategy": "cross_sectional_rank",
+        "params": {
+          "features": {
+            "mom_252_21": 1
+          },
+          "top_fraction": 0.2,
+          "weighting": "equal",
+          "eligibility_column": "eligible"
+        },
+        "book_hash": "0538b32b4732d68a"
+      },
+      {
+        "id": "momentum_12_1_adaptive",
+        "label": "12-1 Momentum + Adaptive Risk",
+        "version": 1,
+        "overlay": "combined",
+        "strategy": "cross_sectional_rank",
+        "params": {
+          "features": {
+            "mom_252_21": 1
+          },
+          "top_fraction": 0.2,
+          "weighting": "equal",
+          "eligibility_column": "eligible"
+        },
+        "book_hash": "c0f04ac0b559f512"
+      }
+    ],
+    "execution": {
+      "schedule": "monthly",
+      "no_trade_band": 0.0025,
+      "min_trade_value": 1000.0,
+      "exempt_initial_funding": true,
+      "cash_reinvestment": "rebalance",
+      "reinvestment_threshold": 0.005,
+      "mandatory_exit_column": "eligible"
+    },
+    "overlays": {
+      "adaptive_drawdown": "defaults",
+      "volatility_target": {
+        "target_volatility": 0.12,
+        "lookback": 63,
+        "min_history": 21,
+        "max_exposure": 1.0,
+        "smoothing": 0.25
+      }
+    },
+    "question": {
+      "id": "P001",
+      "registered": "2026-10-19",
+      "text": "Does the combined risk overlay reduce realized drawdowns relative to its corresponding unrestricted portfolio, and what return is sacrificed?",
+      "pairs": [
+        {
+          "unrestricted": "equal_weight",
+          "overlay": "equal_weight_adaptive"
+        },
+        {
+          "unrestricted": "momentum_12_1",
+          "overlay": "momentum_12_1_adaptive"
+        }
+      ],
+      "minimum_months": 24,
+      "status": "exploratory"
+    },
+    "windows": [
+      {
+        "decision_session": "2026-11-30",
+        "opens": "Mon 2026-11-30 17:00 EST",
+        "closes": "Tue 2026-12-01 16:00 EST",
+        "opens_utc": "2026-11-30T22:00:00+00:00",
+        "closes_utc": "2026-12-01T21:00:00+00:00"
+      },
+      {
+        "decision_session": "2026-12-31",
+        "opens": "Thu 2026-12-31 17:00 EST",
+        "closes": "Mon 2027-01-04 16:00 EST",
+        "opens_utc": "2026-12-31T22:00:00+00:00",
+        "closes_utc": "2027-01-04T21:00:00+00:00"
+      },
+      {
+        "decision_session": "2027-01-29",
+        "opens": "Fri 2027-01-29 17:00 EST",
+        "closes": "Mon 2027-02-01 16:00 EST",
+        "opens_utc": "2027-01-29T22:00:00+00:00",
+        "closes_utc": "2027-02-01T21:00:00+00:00"
+      }
+    ],
+    "backfill_note": "Practice (BACKFILL) records exist in the backend and are deliberately not published here.",
+    "anchoring": "The ledger is committed in c9f1797, and that commit is the head of the research repository's GitHub remote (a private repository; its ledger head hash is published here)."
+  }
+}
